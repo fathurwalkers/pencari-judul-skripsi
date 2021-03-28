@@ -12,18 +12,29 @@ print(colored(figfont + "By FathurWalkers", 'blue'))
 request_input = input("Masukkan judul mu sodara : ")
 
 split_request = request_input.split(" ")
+
 judul_split = juduljudul.split(",")
+ite = 0
+iter = 0
 
-for jumlah in split_request: 
-    print("Mencocok'an judul dari ", request_input)
-    ite = 1
+for judul in range(len(judul_split)):
+#     # judulindex = judul[judul]
+# for judul in judul_split:
+    if judul_split[int(judul)] in split_request:
+        ite += 1
+        iter += 1
+        print(judul_split[int(judul)])
+        judulsama = "kata yang sama ditemukan sebanyak "
+        print(judulsama + str(ite))
+        print(iter)
+    else:
+        print("Tidak ada yang sama!")
+print("Total Count " + str(iter))
 
-    for judul in judul_split:
-        # match = re.findall(judul, jumlah)
-        if judul in jumlah:
-            ite += 1
-            judulsama = "kata yang sama ditemukan sebanyak "
-            print(judulsama + str(ite))
+    # if any(judul in word for word in split_request):
+    #     ite += 1
+    #     judulsama = "kata yang sama ditemukan sebanyak "
+    #     print(judulsama + str(ite))
 
     # for judulini in judul_split:
     #     if jumlah in judulini:
